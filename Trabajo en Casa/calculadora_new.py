@@ -8,24 +8,20 @@ E - Exit """
 
 # Definición método BIENVENIDA al programa
 def bienvenida():
-    print('¡Bienvenido al programa de operaciones simples!'
-    ' Indique qué operación matemática desea utilizar:')
+    print('*********************************************'
+          '¡Bienvenido al programa de operaciones simples!'
+    ' Indique qué operación matemática desea utilizar:'
+          '*********************************************')
     print()
 
-# Definición de los métodos para las OPERACIONES MATEMÁTICAS, devuelve el resultado de la operación matemática
+# Definición de los métodos para las OPERACIONES MATEMÁTICAS, devuelve el RESULTADO de la operación matemática
 # en donde los valores ingresados por el usuario y serán dispuestos como parámetros dentro del método.
+suma = lambda n1, n2 : n1 + n2
+resta = lambda n1,n2 : n1 - n2
+multiplicacion = lambda n1,n2 : n1 * n2
+division = lambda n1,n2: n1 // n2
 
-def suma(n1,n2):
-    return f'El resultado de la suma es: {n1 + n2}'
-
-def resta(n1,n2):
-    return f'El resultado de la resta es: {n1 - n2}'
-
-def multiplicacion(n1,n2):
-    return f'El resultado de la multiplicación es: {n1 * n2}'
-
-def division(n1,n2):
-    return f'El resultado de la división es: {n1 / n2}'
+#Cuerpo del Programa
 inicio = 0
 while inicio == 0:
     bienvenida()
@@ -50,8 +46,9 @@ while inicio == 0:
             print()
         else:
             print()
-            print(suma(x, y))
+            print(f'El RESULTADO de la suma es:{suma(x,y)}')
             print()
+            pass
 
 # OPERACIÓN MATEMÁTICA RESTA
     if seleccion_user == 'R':
@@ -66,7 +63,7 @@ while inicio == 0:
             print()
         else:
             print()
-            print(resta(x, y))
+            print(f'El RESULTADO de la resta es: {resta(x,y)}')
 
 # OPERACIÓN MATEMÁTICA MULTIPLICACIÓN
     if seleccion_user == 'M':
@@ -81,7 +78,7 @@ while inicio == 0:
             print()
         else:
             print()
-            print(multiplicacion(x, y))
+            print(f'El RESULTADO de la multiplicación es: {multiplicacion(x,y)}')
 
 # OPERACIÓN MATEMÁTICA DIVISIÓN
     if seleccion_user == 'D':
@@ -100,5 +97,5 @@ while inicio == 0:
 
 # OPERACIÓN SALIR DEL PROGRAMA
     if seleccion_user == 'E':
-        print('Gracias por usar nuestra calculadora, hasta pronto')
+        print('Gracias por usar nuestra calculadora, ¡Hasta pronto!')
         inicio += 1

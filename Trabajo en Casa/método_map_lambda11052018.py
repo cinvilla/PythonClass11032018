@@ -1,8 +1,23 @@
-## Ejemplo tomado de https://www.python-course.eu/python3_lambda.php
+# la expresión se ejecta y el resultado es devuelto
+x = lambda a : a + 10
+print(x(5))
 
-C = [39.2, 36.5, 37.3, 38, 37.8] # lista de números en secuencia a los que se les aplicará la función en map
-F = list(map(lambda x: (float(9) / 5) * x + 32, C)) # En lambda se define lo que le hará la función a los elementos con una expresión aritmética
-print(F) # En la variable C, se le aplicará la función lambda a cada uno de sus elementos
-C = list(map(lambda x: (float(5) / 9) * (x - 32), F))
-print(C)
+# cualquier # de argumentos
+x = lambda a,b : a * b
+print(x(5,6))
 
+# suma 3 argumentos
+x = lambda a,b,c : a + b + c
+print(x(5,6,7))
+
+def myfunc(n):
+    return lambda a : a * n
+
+mydoubler = myfunc(2)  # doubles the number that you sent
+print(mydoubler(11))
+
+mydoubler = myfunc(4)
+print(mydoubler(2))
+
+# myfunc(2) = lambda a : a * 2
+# mydoubler(11) = pasar el argumento dentro de esa función a la función de 2
